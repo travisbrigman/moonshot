@@ -19,11 +19,11 @@ struct Mission: Codable, Identifiable {
     let description: String
     
     var displayName: String {
-        "Appollo \(id)"
+        "Apollo \(id)"
     }
     
     var image: String {
-        "appollo\(id)"
+        "Apollo\(id)"
     }
     
     var formattedLaunchDate: String {
