@@ -29,12 +29,18 @@ struct Mission: Codable, Identifiable {
     var formattedLaunchDate: String {
         
         if let launchDate = launchDate {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        return formatter.string(from: launchDate)
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            return formatter.string(from: launchDate)
         } else {
-                return "N/A"
-            }
+            return "N/A"
         }
     }
+    
+    var joinedCrew: String {
+
+        let crewNames = crew.map { $0.name }
+        return crewNames.joined(separator: ", ")
+    }
+}
 
