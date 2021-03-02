@@ -26,6 +26,7 @@ struct AstronautView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: geometry.size.width)
+                        .accessibility(label: Text("\(self.astronaut.name) portrait"))
                     
                     Text(self.astronaut.description)
                         .padding()

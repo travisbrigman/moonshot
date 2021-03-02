@@ -26,6 +26,7 @@ struct MissionView: View {
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.7)
                         .padding(.top)
+                        .accessibility(label: Text("\(self.mission.image) crew"))
                     Text(self.mission.formattedLaunchDate)
                     Text(self.mission.description)
                         .padding()
@@ -40,6 +41,7 @@ struct MissionView: View {
                                     .clipShape(Circle())
                                     .overlay(Circle()
                                         .stroke(Color.customBlue, lineWidth: 1))
+                                    .accessibility(label: Text("Astronaut Image"))
                                 
                                 VStack(alignment: .leading) {
                                     Text(crewMember.astronaut.name)
